@@ -10,7 +10,8 @@ def healthcheck():
     return Response(
         status=200,
         response=json.dumps({
-            "status": "test 2",
+            "status": "ok",
+            "version": 1,
             "app_env": os.getenv("APP_ENV"),
             "timestamp": datetime.now().isoformat()
         }
